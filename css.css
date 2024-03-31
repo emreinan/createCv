@@ -1,0 +1,137 @@
+.sayfa {
+  height: 1250px;
+  width: 1900px;
+}
+.genelbaslik {
+  width: 100%;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.sutunlar {
+  display: flex;
+}
+.metin {
+  height: 1200px;
+  width: 500px;
+  border: 2px solid black;
+  background-color: gray;
+}
+.gorunus {
+  height: 1200px;
+  width: 500px;
+  border: 2px solid black;
+  background-color: lightgray;
+}
+table {
+  margin-left: 10px;
+}
+h2 {
+  text-align: center;
+  font-size: 22px;
+  padding: 15px;
+}
+th {
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: left;
+}
+#Cv {
+  border: 1px solid black;
+  width: 900px;
+  height: 1200px;
+  background-color: lightgray;
+  display: flex;
+  margin-left: 10px;
+}
+#Cv .baslik {
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 18px;
+}
+#Cv #SolSutun {
+  width: 300px;
+  height: 1200px;
+  background-color: aliceblue;
+  margin-left: 30px;
+  overflow:auto;
+}
+#Cv #SolSutun .kutu {
+  height: 310px;
+  margin: 0 15px;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+#Cv .Fotograf {
+  height: 220px;
+  width: 200px;
+}
+#Cv #angularFoto {
+  border: 1px solid black;
+  margin-left: 65px;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 150px;
+}
+#Cv #circleFoto {
+  border: 1px solid black;
+  margin-left: 65px;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 150px;
+  border-radius: 50%;
+}
+#Cv #ellipseFoto {
+  border: 1px solid black;
+  margin-left: 65px;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 150px;
+  border-radius: 15%;
+}
+.hr{
+  border-style: solid;
+}
+#Cv .SagSutun {
+  width: 580px;
+  height: 1200px;
+  /* background-color: plum; */
+  margin: 0 20px;
+}
+#Cv .SagSutun .kutu {
+  height: 500px;
+  width: 100%;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+/* #workExpCv{ 
+    width: 580px;
+    height: 450px;
+  border: 1px solid black;
+} */ /* METİNDEN TAŞIYOR DÜZENLENMESİ GEREKİYOR*/
+/* #profileCv {
+  width: 580px;
+  height: 450px;
+border: 1px solid black;
+} */ /* METİNDEN TAŞIYOR DÜZENLENMESİ GEREKİYOR*/
+#Cv #isimEtiketi {
+  background-color: rgb(59, 59, 59);
+  margin: 20px 0;
+  width: 580px;
+  height: 150px;
+  text-align: center;
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+#Cv #isimEtiketi hr {
+  width: 20%;
+}
+#Cv #nameCv {
+  font-size: 30px;
+}
+#Cv #titleCv {
+  font-size: 20px;
+}

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gorev-2</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <div class="sayfa">
+      <div class="genelbaslik">CV Hazırlama Aracı</div>
+      <div class="sutunlar">
+        <div class="metin">
+          <h2 class="ustBaslik">
+            Metin İçerikleri
+            <hr >
+          </h2>
+          <table>
+            <thead>
+              <th>İsim Kutusu</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="name">Ad Soyad:</label></td>
+                <td>
+                  <input
+                    onclick="nameEnter()"
+                    type="text"
+                    name="name"
+                    id="name"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="title">Ünvan:</label></td>
+                <td>
+                  <input
+                    onclick="Title()"
+                    type="text"
+                    name="title"
+                    id="title"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <table>
+            <thead>
+              <th>İletişim Bilgileri</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="phone">Telefon:</label></td>
+                <td>
+                  <input onclick="phone()" type="tel" name="phone" id="phone" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="email">Mail:</label></td>
+                <td>
+                  <input
+                    onclick="email()"
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="web">Web</label></td>
+                <td>
+                  <input onclick="web()" type="url" name="web" id="web" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="adress">Adres:</label></td>
+                <td>
+                  <textarea
+                    onclick="adress()"
+                    minlength="20"
+                    maxlength="100"
+                    name="adress"
+                    id="adress"
+                    cols="20"
+                    rows="5"
+                    placeholder="Max 100 karakter giriniz."
+                  ></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table onclick="education()">
+            <thead>
+              <th>Eğitim Bilgileri</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="edu">Açıklama</label></td>
+                <td>
+                  <textarea
+                    maxlength="100"
+                    name="education"
+                    id="edu"
+                    cols="20"
+                    rows="5"
+                    placeholder="Max 100 karakter giriniz."
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="schoolNumber">Okul Sayısı:</label></td>
+                <td>
+                  <select
+                    onclick="schoolNum()"
+                    name="schoolNumber"
+                    id="schoolNumber"
+                  >
+                    <option value="0">Seçiniz</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot onclick="eduli()">
+              <tr id="frstSchool" style="display: none">
+                <td><label for="firstSchool">1. Okul</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="firstSchool"
+                    id="firstSchool"
+                    maxlength="20"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="firstSchoolYear"
+                    placeholder="Açıklama"
+                    id="firstSchoola"
+                    maxlength="12"
+                  />
+                </td>
+              </tr>
+              <tr id="scndSchool" style="display: none">
+                <td><label for="secondSchool">2. Okul</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="secondSchool"
+                    id="secondSchool"
+                    maxlength="20"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="secondSchoolYear"
+                    placeholder="Açıklama"
+                    id="secondSchoola"
+                    maxlength="12"
+                  />
+                </td>
+              </tr>
+              <tr id="thrdSchool" style="display: none">
+                <td><label for="thirdSchool">3. Okul</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="thirdSchool"
+                    id="thirdSchool"
+                    maxlength="20"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="thirdSchoolYear"
+                    placeholder="Açıklama"
+                    id="thirdSchoola"
+                    maxlength="12"
+                  />
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+          <br />
+          <table onclick="skills()">
+            <thead>
+              <th>Yetenekler</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="skills">Açıklama:</label></td>
+                <td>
+                  <textarea
+                    maxlength="100"
+                    name="skills"
+                    id="skills"
+                    cols="20"
+                    rows="5"
+                    placeholder="Max 100 karakter giriniz."
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="skillNo"></label>Yetenek Sayısı:</td>
+                <td>
+                  <select onclick="skillNum()" name="skillNo" id="skillNo">
+                    <option value="0">Seçiniz</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr style="display: none" id="frstSkill">
+                <td><label for="fSkill">1. Yetenek</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="firstSkill"
+                    id="fSkill"
+                    maxlength="20"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="firstSkillDegree"
+                    placeholder="Açıklama"
+                    id="1skill"
+                    maxlength="10"
+                  />
+                </td>
+              </tr>
+              <tr style="display: none" id="scndSkill">
+                <td><label for="sSkill">2. Yetenek</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="secondSkill"
+                    id="sSkill"
+                    maxlength="20"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="secondSkillDegree"
+                    placeholder="Açıklama"
+                    id="2skill"
+                    maxlength="10"
+                  />
+                </td>
+              </tr>
+              <tr style="display: none" id="thrdSkill">
+                <td><label for="thSkill">3. Yetenek</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="thirdSkill"
+                    id="thSkill"
+                    maxlength="20"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="thirdSkillDegree"
+                    placeholder="Açıklama"
+                    id="3skill"
+                    maxlength="10"
+                  />
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+          <br />
+          <table>
+            <thead>
+              <th>Hakkımda</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="profile">Açıklama:</label></td>
+                <td>
+                  <textarea
+                    onclick="profile()"
+                    name="profile"
+                    id="profile"
+                    cols="20"
+                    rows="5"
+                    maxlength="450"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><div id="profileKalan">0/450 karakter girildi.</div></td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <table>
+            <thead>
+              <th>İş Deneyimi</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="workExp">Açıklama:</label></td>
+                <td>
+                  <textarea
+                    onclick="workExp()"
+                    name="workExp"
+                    id="workExp"
+                    cols="20"
+                    rows="5"
+                    maxlength="450"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><div id="expKalan">0/450 karakter girildi.</div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gorunus">
+          <h2 class="ustBaslik">
+            Görünüş
+            <hr />
+          </h2>
+          <table onclick="colors()">
+            <thead>
+              <th>Renkler</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="cvBgColor">Arkaplan Rengi:</label></td>
+                <td><input type="color" name="cvBgColor" id="cvBgColor" /></td>
+              </tr>
+              <tr>
+                <td><label for="leftBgColor">Sol Kolon Rengi:</label></td>
+                <td>
+                  <input type="color" name="leftBgColor" id="leftBgColor" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="nameBgColor">İsim Kutusu Rengi:</label></td>
+                <td>
+                  <input type="color" name="nameBgColor" id="nameBgColor" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="nameColor">İsim Kutusu Yazı Rengi:</label></td>
+                <td><input type="color" name="nameColor" id="nameColor" /></td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <table>
+            <thead>
+              <th>Yazı Tipi</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="fontStyle">Yazı Tipi:</label></td>
+                <td>
+                  <select
+                    onclick="font()"
+                    name="fontStyle"
+                    id="fontStyle"
+                    size="3"
+                  >
+                    <option value="times">Times New Roman</option>
+                    <option value="verdana">Verdana</option>
+                    <option value="arial">Arial</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <table>
+            <thead>
+              <th>Fotoğraf</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="photoFrame">Fotoğraf Çerçeve Şekli:</label></td>
+                <td>
+                  <select
+                    onclick="photo()"
+                    name="photoFrame"
+                    id="photoFrame"
+                    size="3"
+                  >
+                    <option value="angular">Köşeli</option>
+                    <option value="ellipse">Oval</option>
+                    <option value="circle">Yuvarlak</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <table >
+            <thead>
+              <th>Başlık Alıt Çizgileri</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="hrColor">Çizgi Rengi:</label></td>
+                <td><input onclick="lineColor()" type="color" name="hrColor" id="hrColor" /></td>
+              </tr>
+              <tr>
+                <td><label for="hrStyle">Çizgi Şekli:</label></td>
+                <td>
+                  <select onclick="lineStyle()" name="hrStyle" id="hrStyle" size="3">
+                    <option value="dotted">Noktalı</option>
+                    <option value="dashed">Çizgili</option>
+                    <option value="solid">Düz</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="Cv">
+          <div id="SolSutun">
+            <div class="Fotograf">
+              <div style="display: none" id="angularFoto">Fotoğraf</div>
+              <div style="display: none" id="ellipseFoto">Fotoğraf</div>
+              <div style="display: none" id="circleFoto">Fotoğraf</div>
+            </div>
+            <div class="kutu">
+              <div class="baslik">CONTACT</div>
+              <hr class="hr" />
+              <ul>
+                <li id="phoneCv"></li>
+                <li id="emailCv"></li>
+                <li id="webCv"></li>
+                <li id="adressCv"></li>
+              </ul>
+            </div>
+            <div class="kutu">
+              <div class="baslik">EDUCATION</div>
+              <hr class="hr"/>
+              <div id="eduCv"></div>
+              <ul>
+                <li style="display: none" id="eduLi1">
+                  <div id="eduLi1Div"></div>
+                  <ul>
+                    <li id="eduLi1a"><div id="eduLi1aDiv"></div></li>
+                  </ul>
+                </li>
+                <li style="display: none" id="eduLi2">
+                  <div id="eduLi2Div"></div>
+                  <ul>
+                    <li id="eduLi2a"><div id="eduLi2aDiv"></div></li>
+                  </ul>
+                </li>
+                <li style="display: none" id="eduLi3">
+                  <div id="eduLi3Div"></div>
+                  <ul>
+                    <li id="eduLi3a"><div id="eduLi3aDiv"></div></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="kutu">
+              <div class="baslik">SKILLS</div>
+              <hr class="hr"/>
+              <div id="skillsCv"></div>
+              <ul>
+                <li style="display: none" id="skillList1">
+                  <div id="skillList1Div"></div>
+                  <ul>
+                    <li id="skillList1a"><div id="skillList1aDiv"></div></li>
+                  </ul>
+                </li>
+                <li style="display: none" id="skillList2">
+                  <div id="skillList2Div"></div>
+                  <ul>
+                    <li id="skillList2a"><div id="skillList2aDiv"></div></li>
+                  </ul>
+                </li>
+                <li style="display: none" id="skillList3">
+                  <div id="skillList3Div"></div>
+                  <ul>
+                    <li id="skillList3a"><div id="skillList3aDiv"></div></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="SagSutun">
+            <div id="isimEtiketi">
+              <br />
+              <div id="nameCv">{ AD SOYAD }</div>
+              <hr />
+              <div id="titleCv">{ UNVAN }</div>
+            </div>
+            <div class="kutu">
+              <div class="baslik">PROFILE</div>
+              <hr class="hr"/>
+              <div id="profileCv"></div>
+            </div>
+            <div class="kutu">
+              <div class="baslik">WORK EXPERIENCE</div>
+              <hr class="hr"/>
+              <div id="workExpCv"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Js.js"></script>
+  </body>
+</html>
